@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yann LeCun Paper Generator</title>
+    <meta name="description"
+        content="Automatically generates peer-review-ready Yann LeCun position papers. 100% JEPA-compliant.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header class="site-header">
+            <div class="header-inner">
+                <span class="site-label">arXiv preprint server</span>
+                <nav class="site-nav">
+                    <span>cs.AI</span>
+                    <span>cs.LG</span>
+                    <span>cs.NE</span>
+                    <span class="nav-dot">·</span>
+                    <span class="nav-note">100% JEPA-compliant</span>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="intro">
+                <h1 class="site-title">Yann LeCun<br>Paper Generator</h1>
+                <p class="site-desc">Produces authentic position papers at the push of a button.<br>Peer review pass
+                    rate: <strong>100%</strong>. Transformer citations: <strong>0</strong>.</p>
+            </div>
+
+            <button class="generate-btn" id="generateBtn">
+                Generate Paper
+                <span class="btn-shortcut">space</span>
+            </button>
+
+            <!-- Output -->
+            <article class="paper" id="paper" aria-live="polite">
+
+                <div class="paper-top">
+                    <div class="paper-ids">
+                        <span class="arxiv-id" id="arxivId">arXiv:——.——</span>
+                        <span class="paper-date" id="paperDate"></span>
+                        <span class="paper-badge">Submitted</span>
+                    </div>
+                </div>
+
+                <h2 class="paper-title" id="paperTitle">
+                    Press "Generate Paper" to produce your next contribution to the field.
+                </h2>
+
+                <div class="paper-authors" id="paperAuthors">
+                    <span class="author-name">Yann LeCun</span><sup>1</sup>,
+                    <span id="coauthors" class="coauthors">Some Agreeable Postdoc<sup>1</sup>, Another
+                        Co-Author<sup>1</sup></span>
+                    <div class="affiliation"><sup>1</sup>Meta AI Research / FAIR &mdash; New York &nbsp;·&nbsp; <em
+                            class="affil-note">co-authors listed by level of agreement with first author</em></div>
+                </div>
+
+                <section class="paper-section">
+                    <h3 class="section-title">Abstract</h3>
+                    <p class="abstract" id="abstract">The abstract will appear here after generation. It will, of
+                        course, mention JEPA.</p>
+                </section>
+
+                <section class="paper-section">
+                    <h3 class="section-title">Keywords</h3>
+                    <div class="keywords" id="keywords">
+                        <span class="kw">JEPA</span>
+                        <span class="kw">World Models</span>
+                        <span class="kw">Self-Supervised Learning</span>
+                    </div>
+                </section>
+
+                <footer class="paper-foot">
+                    <div class="citations-block">
+                        <span class="citations-label">References (auto-populated)</span>
+                        <ol class="citations-list" id="citationsList">
+                            <li>LeCun, Y. (2022)</li>
+                            <li>LeCun, Y. (2023)</li>
+                            <li>LeCun, Y. (2024)</li>
+                            <li>LeCun, Y. (personal blog post)</li>
+                            <li>LeCun, Y. (tweet thread, 3am)</li>
+                            <li>LeCun, Y. (reply to Karpathy)</li>
+                        </ol>
+                    </div>
+                    <div class="foot-note" id="footNote">
+                        Correspondence: yann@meta.com (please no more LLM fanmail)<br>
+                        We thank the Meta FAIR team and nobody who disagrees with us.
+                    </div>
+                </footer>
+
+            </article>
+
+            <div class="stats-row" id="statsRow">
+                <div class="stat">
+                    <span class="stat-n" id="countTotal">0</span>
+                    <span class="stat-l">papers generated</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-n" id="countJepa">0</span>
+                    <span class="stat-l">JEPA mentions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-n" id="countTransformers">0</span>
+                    <span class="stat-l">transformers dismissed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-n" id="countMoravec">0</span>
+                    <span class="stat-l">Moravec invocations</span>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="site-footer">
+            <p>Not affiliated with Meta, FAIR, or Yann LeCun. This is satire. We respect the JEPA. Please don't sue me.
+            </p>
+            <p class="seed-note"><code>random.seed(42)</code> &mdash; for reproducibility™</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
